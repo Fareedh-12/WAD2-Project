@@ -7,10 +7,6 @@ from radar.models import UserProfile, FriendList, Session
 def homepage(request):
     return render(request, 'radar/homepage.html')
 
-def add_user(request):
-    
-
-
 def friendspage(request):
     return render(request, 'radar/friendspage.html')
 
