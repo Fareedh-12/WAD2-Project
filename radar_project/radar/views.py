@@ -7,7 +7,6 @@ from django.urls import reverse
 from djago.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 
-
 def homepage1(request):
     return render(request, 'radar/homepage1.html')
 
@@ -28,3 +27,29 @@ def signup(request):
 
 def account(request):
     return render(request, 'radar/account.html')
+
+def add_user(request):
+    form = UserForm()
+
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+            return redirect('/radar/')
+        else:
+            print(form.errors)
+    return render(request, 'radar/add_user.html', {'form': form})
+
+def add_userprofile(request):
+    form = UserProfileForm()
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+            return redirect('/radar/')
+        else:
+            print(form.errors)
+    return render(request, 'radar/add_user.html', {'form': form})
