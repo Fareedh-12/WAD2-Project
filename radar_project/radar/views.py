@@ -38,11 +38,10 @@ def login(request):
             return HttpResponse("Invalid login details supplied.")
 
     else:
-<<<<<<< HEAD
-        return render(request, "radar/login.html")
-=======
+
+
         return render(request, 'radar/login.html')
->>>>>>> main
+
 
 
 def signup(request):
