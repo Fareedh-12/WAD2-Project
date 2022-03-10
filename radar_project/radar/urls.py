@@ -4,10 +4,10 @@ from radar import views
 app_name = 'radar'
 
 urlpatterns = [
-    path('', views.homepage, name='homepage'),
+    path('', views.homepage1, name='homepage1'),
     path('signup/', views.signup, name='signup'),
     path('login/', views.login, name='login'),
-    path('homepage/', views.homepage1, name='homepage'),
+    path('homepage/', views.homepage1, name='homepage1'),
     path('friendspage/', views.friendspage, name='friendspage'),
     path('account/', views.account, name='account'),
 
