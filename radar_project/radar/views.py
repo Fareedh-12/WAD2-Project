@@ -38,7 +38,11 @@ def login(request):
             return HttpResponse("Invalid login details supplied.")
 
     else:
+<<<<<<< HEAD
         return render(request, "radar/login.html")
+=======
+        return render(request, 'radar/login.html')
+>>>>>>> main
 
 
 def signup(request):
@@ -80,4 +84,6 @@ def account(request):
 @login_required
 def user_logout(request):
     logout(request)
+
     return redirect(reverse('radar:homepage1'))
+
