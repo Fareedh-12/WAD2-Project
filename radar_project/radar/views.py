@@ -1,14 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from radar.forms import UserForm, UserProfileForm
+from radar.models import UserProfile, FriendList, Session
 
 
-def homepage1(request):
-    return render(request, 'radar/homepage1.html')
-
-
-def homepage2(request):
-    return render(request, 'radar/homepage2.html')
+def homepage(request):
+    return render(request, 'radar/homepage.html')
 
 
 def friendspage(request):
